@@ -1,0 +1,14 @@
+module RedPic{
+
+	interface RedPicClient{
+                string getEmail();
+                string getUsername();
+		void update(in string img, in string username);	
+        };
+
+	interface Remote{
+		void uploadImage(in string img, in string username);
+                void addClient(in RedPicClient client);
+                void removeClient(in RedPicClient client);
+	};
+};
